@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header.js";
 import Banner from "../components/Banner.js";
 import ProductFeed from "../components/ProductFeed.js";
-
+import Footer from "../components/Footer.js"
 export default function Home({ products }) {
   return (
     <div className="bg-gray-100">
@@ -15,6 +15,8 @@ export default function Home({ products }) {
         <Banner />
         {/*ProductFeed */}
         <ProductFeed products={products} />
+        {/*Footer */}
+        <Footer/>
       </main>
     </div>
   );
