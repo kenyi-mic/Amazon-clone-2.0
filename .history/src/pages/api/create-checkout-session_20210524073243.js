@@ -1,3 +1,5 @@
+import { isResSent } from "next/dist/next-server/lib/utils";
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 export default async (req, res) => {
   const { items, email } = req.body;
@@ -14,7 +16,7 @@ export default async (req, res) => {
     },
   }));
   const session = await stripe.checkout.sessions.create({
-    shipping_rates: ["shr_1IuSl6B9JIM1sqmfCMEFcleC"],
+    shipping_rates: ["shr_1IuRdwLuiqGvtIU7hcANJkd5"],
     payment_method_types: ["card"],
     shipping_address_collection: {
       allowed_countries: ["US", "GB", "CA", "IN"],

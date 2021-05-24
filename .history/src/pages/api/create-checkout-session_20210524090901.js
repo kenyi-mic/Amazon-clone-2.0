@@ -1,5 +1,8 @@
+import { useSession } from "next/auth-client";
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 export default async (req, res) => {
+  const [session] = useSession();
   const { items, email } = req.body;
   const transformedItems = items.map((item) => ({
     description: item.description,
@@ -13,7 +16,7 @@ export default async (req, res) => {
       },
     },
   }));
-  const session = await stripe.checkout.sessions.create({
+  session = await stripe.checkout.sessions.create({
     shipping_rates: ["shr_1IuSl6B9JIM1sqmfCMEFcleC"],
     payment_method_types: ["card"],
     shipping_address_collection: {

@@ -76,10 +76,7 @@ const footer = () => {
             className="cursor-pointer"
           />
         </p>
-        <p
-          onClick={!session ? signIn : signOut}
-          className="grid grid-cols-1 p-5  place-items-center link text-gray-400 hover:text-white"
-        >
+        <p onClick={!session ? signIn : signOut} className=" ">
           Sign Up
         </p>
       </div>

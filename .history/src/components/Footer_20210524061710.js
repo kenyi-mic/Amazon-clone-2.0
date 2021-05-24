@@ -32,7 +32,8 @@ const footer = () => {
           <p className="link text-gray-400">Self-Publish with Us</p>
           <p className="link text-gray-400">Host an Amazon Hub</p>
           <p className="link text-gray-400">
-            {">"} See More Make Money <br /> with Us
+            <p className="text-extrabold">{">"}</p> See More Make Money <br />{" "}
+            with Us
           </p>
           <p className="link text-gray-400"></p>
         </div>
@@ -78,7 +79,7 @@ const footer = () => {
         </p>
         <p
           onClick={!session ? signIn : signOut}
-          className="grid grid-cols-1 p-5  place-items-center link text-gray-400 hover:text-white"
+          className=" text-white grid grid-cols-1 link  place-items-center p-5 text-bold hover:text-gray-500"
         >
           Sign Up
         </p>

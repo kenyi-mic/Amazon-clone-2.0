@@ -78,7 +78,7 @@ const footer = () => {
         </p>
         <p
           onClick={!session ? signIn : signOut}
-          className="grid grid-cols-1 p-5  place-items-center link text-gray-400 hover:text-white"
+          className=" text-white grid grid-cols-1 link  place-items-center p-5 text-bold hover:text-gray-500"
         >
           Sign Up
         </p>

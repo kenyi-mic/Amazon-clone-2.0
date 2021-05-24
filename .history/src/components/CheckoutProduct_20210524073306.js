@@ -33,7 +33,6 @@ function CheckoutProduct({
   const removeItemFromBasket = () => {
     dispatch(removeFromBasket({ id }));
   };
-  console.log(id);
   return (
     <div className="grid grid-cols-5">
       <Image src={image} width={200} height={200} alt="" />
