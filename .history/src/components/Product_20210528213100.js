@@ -38,7 +38,7 @@ function Product({ id, title, price, description, category, image }) {
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
-      <img src={image} width={200} height={200} className="w-90% m-auto" />
+      <Image src={image} width={200} height={"auto"} />
 
       <h4 className="my-3">{title}</h4>
 
